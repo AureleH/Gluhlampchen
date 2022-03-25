@@ -1,4 +1,27 @@
-\documentclass{article}
+\documentclass[12pt, a4paper, twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[margin=1in,footskip=0.25in]{geometry}
+\usepackage{pgf}
+\usepackage[absolute, overlay]{textpos}
+\setlength{\TPHorizModule}{1.0 pt}
+\textblockorigin{\paperwidth}{0.0 pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Stromkreise \& Glühlampchen}
+\rhead{Physik Bericht}
 \begin{document}
-    This is some text.
+    \pgfmathwidth{"\\\\ J. Dubois \& A. Huillet\\ MNG Rämibühl\\"}
+    \begin{textblock}{\pgfmathresult}[1, 0](0, 0)
+    \noindent
+    \\\\ J. Dubois \& A. Huillet\\ MNG Rämibühl\\ 8001 Zürich
+    \end{textblock}
+    \input{title.tex}
+
+    \newpage
+
 \end{document}
