@@ -106,6 +106,46 @@
     \begin{center}
         \begin{adjustbox}{scale=0.4}
         \begin{circuitikz} \draw
+            (0,0) to[battery1,l=\textit{U}, i=\textit{I}, invert] (0,10)
+            (0,10)--(16/3,10)
+            (16/3,10)--(16/3,12)
+            (16/3,10)--(16/3,8)
+            (16/3,12) to[lamp, i=\textit{I1}, l=\textit{U1}] (32/3,12)
+            (16/3,8) to[lamp, i=\textit{I2}, l=\textit{U2}] (32/3,8)
+            (32/3,12)--(32/3,10)
+            (32/3,8)--(32/3,12)
+            (32/3,10)--(16,10)
+            (16,10)--(16,0)--(0,0)
+            ;
+        \end{circuitikz}
+    \end{adjustbox}
+    \end{center}
+    Folgende Messung ergab sich:\\
+    \begin{center}
+        \begin{tabular}{l|r}
+            \textbf{U (Gesamtspannung)} & \textbf{I (Gesamtstrom)}\\
+            \hline
+            20.81 \textit{V} & 73.6 \textit{mA}\\
+            \\
+            \hline
+            \\
+            \textbf{U1 (Teilspannung 1)} & \textbf{I1 (Teilstrom 1)}\\
+            \hline
+            10.37 \textit{V} & 73.57 \textit{mA}\\
+            \\
+            \hline
+            \\
+            \textbf{U2 (Teilspannung 2)} & \textbf{I2 (Teilstrom 2)}\\
+            \hline
+            10.45 \textit{V} & 73.6 \textit{mA}
+
+        \end{tabular}
+    \end{center}
+    \subsection{Messung E}
+    Folgender Stromkreis wurde aufgebaut:
+    \begin{center}
+        \begin{adjustbox}{scale=0.4}
+        \begin{circuitikz} \draw
             (0,0) to[battery1, invert] (0,10)
             (0,10)--(16/3,10)
             (16/3,10)--(16/3,12)
@@ -120,7 +160,6 @@
         \end{circuitikz}
     \end{adjustbox}
     \end{center}
-    \subsection{Messung E}
     \subsection{Messung F}
     \subsection{Messung G}
     \newpage
