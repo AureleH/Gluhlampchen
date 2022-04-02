@@ -8,7 +8,9 @@
 \usepackage{pgf}
 \usepackage[absolute, overlay]{textpos}
 \usepackage{pdfpages}
-\usepackage{circuitikz}
+\usepackage[siunitx]{circuitikz}
+\usepackage{adjustbox}
+
 \setlength{\TPHorizModule}{1.0 pt}
 \textblockorigin{\paperwidth}{0.0 pt}
 
@@ -32,7 +34,17 @@
     \newpage
     \section{Experiment}
     \newpage
-    \section{Messungen}
+    \section{Messungen}     
+    \subsection{Messung A}
+    Ein einfacher Stromkreis wurde gebaut. Dieser wird für die Messungen A, B und C\\ benutzt:\\
+    \newline
+    \begin{center}
+        \begin{circuitikz} \draw
+            (0,0) to[battery1, invert, l=\textit{U}] (0,4)
+            to[lamp, i=\textit{I}] (4,4) -- (4,0) -- (0,0)
+            ;
+        \end{circuitikz}
+    \end{center}
     \subsection{Messung B}
     Bei Messung B wurden für zehn verschiedenen Spannungswerte den Strom durch das Lämpchen gemessen:\\
     \begin{center}
@@ -51,25 +63,63 @@
             24.85 & 123.00
         \end{tabular}
     \end{center}
+    \newpage
     \subsection{Messung C}
-    In dieser Messung wurde das gleiche Verfahren wie bei Messung B bei zwei weiter Lämpchen angewendet.
-    Messung für Lämpchen 2:\\
+    In dieser Messung wurde das gleiche Verfahren wie bei Messung B bei zwei weiter Lämpchen angewendet.\\\\
+    \textbf{Messung für Lämpchen 2:}\\
     \begin{center}
         \begin{tabular}{l|r}
             \textbf{Spannung U[V]} & \textbf{Stromstärke I[mA]}\\
             \hline
-            
+            3.65 & 39.10\\
+            5.11 & 48.40\\
+            8.33 & 64.00\\
+            10.37 & 73.30\\
+            12.50 & 81.80\\
+            15.54 & 93.60\\
+            17.62 & 101.00\\
+            19.74 & 107.90\\
+            23.80 & 120.70\\
+            24.85 & 123.90
         \end{tabular}
     \end{center}
-    Messung für Lämpchen 3:\\
+    \vspace{1cm}
+    \textbf{Messung für Lämpchen 3:}\\
     \begin{center}
         \begin{tabular}{l|r}
             \textbf{Spannung U[V]} & \textbf{Stromstärke I[mA]}\\
             \hline
+            3.65 & 39.30\\
+            5.11 & 48.50\\
+            8.33 & 64.10\\
+            10.37 & 73.30\\
+            12.50 & 81.70\\
+            15.54 & 93.40\\
+            17.62 & 100.10\\
+            19.74 & 107.10\\
+            23.80 & 119.60\\
+            24.85 & 122.80
         \end{tabular}
     \end{center}
     \subsection{Messung D}
-
+    Folgender Stromkreis wurde aufgebaut:
+    \begin{center}
+        \begin{adjustbox}{scale=0.4}
+        \begin{circuitikz} \draw
+            (0,0) to[battery1, invert] (0,10)
+            (0,10)--(16/3,10)
+            (16/3,10)--(16/3,12)
+            (16/3,10)--(16/3,8)
+            (16/3,12) to[lamp, i=\textit{I1}] (32/3,12)
+            (16/3,8) to[lamp, i=\textit{I2}] (32/3,8)
+            (32/3,12)--(32/3,10)
+            (32/3,8)--(32/3,12)
+            (32/3,10)--(16,10)
+            (16,10)--(16,0)--(0,0)
+            ;
+        \end{circuitikz}
+    \end{adjustbox}
+    \end{center}
     \subsection{Messung E}
     \subsection{Messung F}
     \subsection{Messung G}
