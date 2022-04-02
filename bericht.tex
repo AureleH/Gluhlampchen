@@ -39,12 +39,14 @@
     Ein einfacher Stromkreis wurde gebaut. Dieser wird für die Messungen A, B und C\\ benutzt:\\
     \newline
     \begin{center}
-        \begin{circuitikz} \draw
-            (0,0) to[battery1, invert, l=\textit{U}] (0,4)
-            to[lamp, i=\textit{I}] (4,4) -- (4,0) -- (0,0)
-            ;
-        \end{circuitikz}
-    \end{center}
+        \begin{adjustbox}{scale=0.4}
+            \begin{circuitikz} \draw
+                (0,10) to[battery1, invert, i=\LARGE{$I$}, l_=\LARGE{$U$}] (0,0)
+                (0,10) to[lamp, i=\LARGE{$I$}] (16,10)--(16,0)--(0,0)
+                ;
+            \end{circuitikz}        
+        \end{adjustbox}
+        \end{center}
     \subsection{Messung B}
     Bei Messung B wurden für zehn verschiedenen Spannungswerte den Strom durch das Lämpchen gemessen:\\
     \begin{center}
@@ -105,40 +107,41 @@
     Folgender Stromkreis wurde aufgebaut:
     \begin{center}
         \begin{adjustbox}{scale=0.4}
-        \begin{circuitikz} \draw
-            (0,0) to[battery1,l=\textit{U}, i=\textit{I}, invert] (0,10)
-            (0,10)--(16/3,10)
-            (16/3,10)--(16/3,12)
-            (16/3,10)--(16/3,8)
-            (16/3,12) to[lamp, i=\textit{I1}, l=\textit{U1}] (32/3,12)
-            (16/3,8) to[lamp, i=\textit{I2}, l=\textit{U2}] (32/3,8)
-            (32/3,12)--(32/3,10)
-            (32/3,8)--(32/3,12)
-            (32/3,10)--(16,10)
-            (16,10)--(16,0)--(0,0)
-            ;
-        \end{circuitikz}
-    \end{adjustbox}
+            \begin{circuitikz} \draw
+                (0,10) to[battery1, i=\LARGE{$I_{tot}$}, l_=\LARGE{$U_{tot}$},invert] (0,0)
+                (0,10) -- (4, 10)
+                (4,10) to[lamp, l=\LARGE{$U_1$}, i=\LARGE{$I_1$}] (8,10)
+                (8,10) to[lamp, l=\LARGE{$U_2$}, i=\LARGE{$I_2$}] (12,10)
+                (12,10)--(16,10) -- (16,0) -- (0,0)
+                ;
+            \end{circuitikz}  
+        \end{adjustbox}
     \end{center}
-    Folgende Messung ergab sich:\\
+    Folgende Werte ergaben sich:\\
     \begin{center}
         \begin{tabular}{l|r}
             \textbf{U (Gesamtspannung)} & \textbf{I (Gesamtstrom)}\\
             \hline
             20.81 \textit{V} & 73.6 \textit{mA}\\
-            \\
             \hline
-            \\
+        \end{tabular}
+    \end{center}
+    \vspace{1cm}
+    \begin{center}
+        \begin{tabular}{l|r}
             \textbf{U1 (Teilspannung 1)} & \textbf{I1 (Teilstrom 1)}\\
             \hline
             10.37 \textit{V} & 73.57 \textit{mA}\\
-            \\
             \hline
-            \\
+        \end{tabular}
+    \end{center}
+    \vspace{1cm}
+    \begin{center}
+        \begin{tabular}{l|r}
             \textbf{U2 (Teilspannung 2)} & \textbf{I2 (Teilstrom 2)}\\
             \hline
-            10.45 \textit{V} & 73.6 \textit{mA}
-
+            10.45 \textit{V} & 73.6 \textit{mA}\\
+            \hline
         \end{tabular}
     \end{center}
     \subsection{Messung E}
@@ -146,12 +149,12 @@
     \begin{center}
         \begin{adjustbox}{scale=0.4}
         \begin{circuitikz} \draw
-            (0,0) to[battery1, invert] (0,10)
+            (0,10) to[battery1,l_=\LARGE{$U_{tot}$}, i=\LARGE{$I_{tot}$}, invert] (0,0)
             (0,10)--(16/3,10)
             (16/3,10)--(16/3,12)
             (16/3,10)--(16/3,8)
-            (16/3,12) to[lamp, i=\textit{I1}] (32/3,12)
-            (16/3,8) to[lamp, i=\textit{I2}] (32/3,8)
+            (16/3,12) to[lamp, i=\LARGE{$I_1$}, l=\LARGE{$U_1$}] (32/3,12)
+            (16/3,8) to[lamp, i=\LARGE{$I_2$}, l=\LARGE{$U_2$}] (32/3,8)
             (32/3,12)--(32/3,10)
             (32/3,8)--(32/3,12)
             (32/3,10)--(16,10)
@@ -160,7 +163,82 @@
         \end{circuitikz}
     \end{adjustbox}
     \end{center}
+    Die Gesamtspanung $U_{tot}$ und der Gesamtstrom $I_tot$ sind bekannt:
+        \[U_{tot} = 20.59 V\]
+        \[I_{tot} = 220.6 mA\]
+    \newline
+    Man weiss schon, dass:
+    \[U_1 = U_2 = U_{tot}\]
+    \newline
+    Das Multimeter zur Strommessung mass folgende Werte für $I_1$ und $I_2$:
+        \[I_1 = 111.3 mA \]
+        \[I_2 = 110.5 mA\]
     \subsection{Messung F}
+    1. Möglichkeit:
+    \begin{center}
+        \begin{adjustbox}{scale=0.4}
+            \begin{circuitikz}\draw
+                (0,10) to[battery1, invert, l_=\LARGE{$U_{tot}$}, i_=\LARGE{$I_{tot}$}] (0,0)
+                (0,10) to[lamp, l=\LARGE{$U_1$}, i=\LARGE{$I_1$}] (16/3,10) 
+                (16/3,10) to[lamp, l=\LARGE{$U_2$}, i=\LARGE{$I_2$}] (32/3,10)
+                (32/3,10) to[lamp, l=\LARGE{$U_3$}, i=\LARGE{$I_3$}] (16,10)
+                (16,10)--(16,0)--(0,0)
+                ;
+            \end{circuitikz}
+        \end{adjustbox}
+    \end{center}
+    2. Möglichkeit:
+    \begin{center}
+        \begin{adjustbox}{scale=0.4}
+            \begin{circuitikz}\draw
+                (0,10) to[battery1, invert, l_=\LARGE{$U_{tot}$}, i_=\LARGE{$I_{tot}$}] (0,0)
+                (0,10)--(4,10)
+                (4,10)--(4,11)
+                (4,10)--(4,9)
+                (4,11) to[lamp, l=\LARGE{$U_1$}, i=\LARGE{$I_1$}] (8,11)
+                (4,9) to[lamp, l_=\LARGE{$U_2$}, i_=\LARGE{$I_2$}] (8,9)
+                (8,11)--(8,10)
+                (8,9)--(8,10)
+                (8,10) to[lamp, l=\LARGE{$U_3$}, i=\LARGE{$I_3$}] (16,10)
+                (16,10)--(16,0)--(0,0)
+                ;
+            \end{circuitikz}
+        \end{adjustbox}
+    \end{center}
+    3. Möglichkeit:
+    \begin{center}
+        \begin{adjustbox}{scale=0.4}
+            \begin{circuitikz}\draw
+                (0,10) to[battery1, invert, l_=\LARGE{$U_{tot}$}, i_=\LARGE{$I_{tot}$}] (0,0)
+                (0,10) to[lamp, l_=\LARGE{$U_1$}, i_=\LARGE{$I_1$}] (8,10)
+                (8,10) to[lamp, l_=\LARGE{$U_3$}, i_=\LARGE{$I_3$}] (16,10)
+                (4,10.4)--(4,11)
+                (4,11) to[lamp, l=\LARGE{$U_2$}, i=\LARGE{$I_2$}] (12,11)
+                (12,11)--(12,10.4)
+                (16,10)--(16,0)--(0,0)
+                ;
+            \end{circuitikz}            
+        \end{adjustbox}
+    \end{center}
+    4. Möglichkeit:
+    \begin{center}
+        \begin{adjustbox}{scale=0.4}
+            \begin{circuitikz}\draw
+                (0,10) to[battery1, invert, l_=\LARGE{$U_{tot}$}, i_=\LARGE{$I_{tot}$}] (0,0)
+                (0,10)--(4,10)
+                (4,10) to[lamp, l=\LARGE{$U_2$}, i=\LARGE{$I_2$}] (12,10)
+                (4,10)--(4,12)
+                (4,10)--(4,8)
+                (12,10)--(12,12)
+                (12,10)--(12,8)
+                (4,12) to[lamp, l=\LARGE{$U_3$}, i=\LARGE{$I_3$}] (12,12)
+                (4,8) to[lamp, l=\LARGE{$U_1$}, i=\LARGE{$I_1$}] (12,8)
+                (12,10)--(16,10)
+                (16,10)--(16,0)--(0,0)
+                ;
+            \end{circuitikz}
+        \end{adjustbox}
+    \end{center}
     \subsection{Messung G}
     \newpage
     \section{Aufgaben}
