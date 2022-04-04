@@ -41,7 +41,7 @@
     \begin{center}
         \begin{adjustbox}{scale=0.4}
             \begin{circuitikz} \draw
-                (0,10) to[battery1, invert, i=\LARGE{$I$}, l_=\LARGE{$U$}] (0,0)
+                (0,10) to[vsource, i=\LARGE{$I$}, l_=\LARGE{$U$}] (0,0)
                 (0,10) to[lamp, i=\LARGE{$I$}] (16,10)--(16,0)--(0,0)
                 ;
             \end{circuitikz}        
@@ -108,7 +108,7 @@
     \begin{center}
         \begin{adjustbox}{scale=0.4}
             \begin{circuitikz} \draw
-                (0,10) to[battery1, i=\LARGE{$I_{tot}$}, l_=\LARGE{$U_{tot}$},invert] (0,0)
+                (0,10) to[vsource, i=\LARGE{$I_{tot}$}, l_=\LARGE{$U_{tot}$},invert] (0,0)
                 (0,10) -- (4, 10)
                 (4,10) to[lamp, l=\LARGE{$U_1$}, i=\LARGE{$I_1$}] (8,10)
                 (8,10) to[lamp, l=\LARGE{$U_2$}, i=\LARGE{$I_2$}] (12,10)
@@ -149,7 +149,7 @@
     \begin{center}
         \begin{adjustbox}{scale=0.4}
         \begin{circuitikz} \draw
-            (0,10) to[battery1,l_=\LARGE{$U_{tot}$}, i=\LARGE{$I_{tot}$}, invert] (0,0)
+            (0,10) to[vsource,l_=\LARGE{$U_{tot}$}, i=\LARGE{$I_{tot}$}, invert] (0,0)
             (0,10)--(16/3,10)
             (16/3,10)--(16/3,12)
             (16/3,10)--(16/3,8)
@@ -174,11 +174,11 @@
         \[I_1 = 111.3 mA \]
         \[I_2 = 110.5 mA\]
     \subsection{Messung F}
-    1. Möglichkeit:
+    1)
     \begin{center}
         \begin{adjustbox}{scale=0.4}
             \begin{circuitikz}\draw
-                (0,10) to[battery1, invert, l_=\LARGE{$U_{tot}$}, i_=\LARGE{$I_{tot}$}] (0,0)
+                (0,10) to[vsource, l_=\LARGE{$U_{tot}$}, i_=\LARGE{$I_{tot}$}] (0,0)
                 (0,10) to[lamp, l=\LARGE{$U_1$}, i=\LARGE{$I_1$}] (16/3,10) 
                 (16/3,10) to[lamp, l=\LARGE{$U_2$}, i=\LARGE{$I_2$}] (32/3,10)
                 (32/3,10) to[lamp, l=\LARGE{$U_3$}, i=\LARGE{$I_3$}] (16,10)
@@ -187,11 +187,11 @@
             \end{circuitikz}
         \end{adjustbox}
     \end{center}
-    2. Möglichkeit:
+    2)
     \begin{center}
         \begin{adjustbox}{scale=0.4}
             \begin{circuitikz}\draw
-                (0,10) to[battery1, invert, l_=\LARGE{$U_{tot}$}, i_=\LARGE{$I_{tot}$}] (0,0)
+                (0,10) to[vsource, invert, l_=\LARGE{$U_{tot}$}, i_=\LARGE{$I_{tot}$}] (0,0)
                 (0,10)--(4,10)
                 (4,10)--(4,11)
                 (4,10)--(4,9)
@@ -205,11 +205,11 @@
             \end{circuitikz}
         \end{adjustbox}
     \end{center}
-    3. Möglichkeit:
+    3)
     \begin{center}
         \begin{adjustbox}{scale=0.4}
             \begin{circuitikz}\draw
-                (0,10) to[battery1, invert, l_=\LARGE{$U_{tot}$}, i_=\LARGE{$I_{tot}$}] (0,0)
+                (0,10) to[vsource, invert, l_=\LARGE{$U_{tot}$}, i_=\LARGE{$I_{tot}$}] (0,0)
                 (0,10) to[lamp, l_=\LARGE{$U_1$}, i_=\LARGE{$I_1$}] (8,10)
                 (8,10) to[lamp, l_=\LARGE{$U_3$}, i_=\LARGE{$I_3$}] (16,10)
                 (4,10.4)--(4,11)
@@ -220,11 +220,11 @@
             \end{circuitikz}            
         \end{adjustbox}
     \end{center}
-    4. Möglichkeit:
+    4)
     \begin{center}
         \begin{adjustbox}{scale=0.4}
             \begin{circuitikz}\draw
-                (0,10) to[battery1, invert, l_=\LARGE{$U_{tot}$}, i_=\LARGE{$I_{tot}$}] (0,0)
+                (0,10) to[vsource, invert, l_=\LARGE{$U_{tot}$}, i_=\LARGE{$I_{tot}$}] (0,0)
                 (0,10)--(4,10)
                 (4,10) to[lamp, l=\LARGE{$U_2$}, i=\LARGE{$I_2$}] (12,10)
                 (4,10)--(4,12)
@@ -239,7 +239,33 @@
             \end{circuitikz}
         \end{adjustbox}
     \end{center}
+    Unsere Vermutungen (Helligkeit):
+    \begin{enumerate}
+        \item 1, 1, 1
+        \item 0, 0, 1
+        \item $\frac{1}{2}$, 1, $\frac{1}{2}$
+        \item 1, 1, 1
+    \end{enumerate}
     \subsection{Messung G}
+    Folgende Helligkeiten ergaben sich nach dem Bau der Schaltungen von \textbf{Messung F}:
+    \begin{enumerate}
+        \item $\frac{1}{3}$, $\frac{1}{3}$, $\frac{1}{3}$
+        \item 0, 0, 1
+        \item $\frac{1}{2}$, 1, $\frac{1}{2}$
+        \item 1, 1, 1
+    \end{enumerate}
+    Folgende Messwerte wurden gemessen:
+    \begin{center}
+        \begin{tabular}{l|l|l|c|r|r}
+            \textbf{Schaltschema} & \textbf{$U_1$} & \textbf{$U_2$} & \textbf{$U_3$} & \textbf{$I_{tot}$} & \textbf{$U_{tot}$}\\
+            \hline
+            \textbf{1} & 4.196 \textit{V} & 4.100 \textit{V} & 4.250 \textit{V} & 42.500 \textit{mA} & 12.530 \textit{V} \\
+            \textbf{2} & 0 \textit{V} & 0 \textit{V} & 12.480 \textit{V} & 81.200 \textit{mA} & 12.480 \textit{V} \\
+            \textbf{3} & 6,235 \textit{V} & 12.400 \textit{V} & 6.169 \textit{V} & 155.2 \textit{mA} & 12.400 \textit{V} \\
+            \textbf{4} & 12.430 \textit{V} & 12.430 \textit{V} & 12.430 \textit{V} & --Kein Wert-- & 12.430 \textit{V}
+
+        \end{tabular}
+    \end{center}
     \newpage
     \section{Aufgaben}
     \newpage
