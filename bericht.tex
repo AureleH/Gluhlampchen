@@ -17,7 +17,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 \lhead{Stromkreise \& Glühlampchen}
-\rhead{Physik Bericht}
+\rhead{Physik Kurzbericht}
 \begin{document}
     \pgfmathwidth{"\\\\ J. Dubois \& A. Huillet\\ MNG Rämibühl\\"}
     \begin{textblock}{\pgfmathresult}[1, 0](0, 0)
@@ -42,7 +42,7 @@
         \begin{adjustbox}{scale=0.4}
             \begin{circuitikz} \draw
                 (0,10) to[vsource, i=\LARGE{$I$}, l_=\LARGE{$U$}] (0,0)
-                (0,10) to[lamp, i=\LARGE{$I$}] (16,10)--(16,0)--(0,0)
+                (0,10) to[lamp, l=\LARGE{$U_1$},i=\LARGE{$I_1$}] (16,10)--(16,0)--(0,0)
                 ;
             \end{circuitikz}        
         \end{adjustbox}
@@ -65,9 +65,9 @@
             24.85 & 123.00
         \end{tabular}
     \end{center}
-    \newpage
     \subsection{Messung C}
-    In dieser Messung wurde das gleiche Verfahren wie bei Messung B bei zwei weiter Lämpchen angewendet.\\\\
+    In dieser Messung wurde das gleiche Verfahren wie bei Messung B bei zwei weiter Lämpchen angewendet.
+    \newpage
     \textbf{Messung für Lämpchen 2:}\\
     \begin{center}
         \begin{tabular}{l|r}
@@ -117,33 +117,17 @@
             \end{circuitikz}  
         \end{adjustbox}
     \end{center}
-    Folgende Werte ergaben sich:\\
-    \begin{center}
-        \begin{tabular}{l|r}
-            \textbf{U (Gesamtspannung)} & \textbf{I (Gesamtstrom)}\\
-            \hline
-            20.81 \textit{V} & 73.6 \textit{mA}\\
-            \hline
-        \end{tabular}
-    \end{center}
-    \vspace{1cm}
-    \begin{center}
-        \begin{tabular}{l|r}
-            \textbf{U1 (Teilspannung 1)} & \textbf{I1 (Teilstrom 1)}\\
-            \hline
-            10.37 \textit{V} & 73.57 \textit{mA}\\
-            \hline
-        \end{tabular}
-    \end{center}
-    \vspace{1cm}
-    \begin{center}
-        \begin{tabular}{l|r}
-            \textbf{U2 (Teilspannung 2)} & \textbf{I2 (Teilstrom 2)}\\
-            \hline
-            10.45 \textit{V} & 73.6 \textit{mA}\\
-            \hline
-        \end{tabular}
-    \end{center}
+    \newpage
+    Folgende Werte ergaben sich:
+    \begin{itemize}
+        \item[\LARGE{-}] $U_{tot} = 20.81 V$
+        \item[\LARGE{-}] $U_1 = 10.37 mA$
+        \item[\LARGE{-}] $U_2 = 10.45 V$
+        \item[\LARGE{-}] $I_1 = 73.57 mA$
+        \item[\LARGE{-}] $I_2 = 73.6 mA$
+        \item[\LARGE{-}] $I_{tot} = 73.6 mA$
+        
+    \end{itemize}
     \subsection{Messung E}
     Folgender Stromkreis wurde aufgebaut:
     \begin{center}
@@ -262,7 +246,7 @@
             \textbf{1} & 4.196 \textit{V} & 4.100 \textit{V} & 4.250 \textit{V} & 42.500 \textit{mA} & 12.530 \textit{V} \\
             \textbf{2} & 0 \textit{V} & 0 \textit{V} & 12.480 \textit{V} & 81.200 \textit{mA} & 12.480 \textit{V} \\
             \textbf{3} & 6,235 \textit{V} & 12.400 \textit{V} & 6.169 \textit{V} & 155.2 \textit{mA} & 12.400 \textit{V} \\
-            \textbf{4} & 12.430 \textit{V} & 12.430 \textit{V} & 12.430 \textit{V} & --Kein Wert-- & 12.430 \textit{V}
+            \textbf{4} & 12.430 \textit{V} & 12.430 \textit{V} & 12.430 \textit{V} & --Kein Wert-   - & 12.430 \textit{V}
 
         \end{tabular}
     \end{center}
