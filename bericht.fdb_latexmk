@@ -1,8 +1,8 @@
 # Fdb version 3
-["pdflatex"] 1649077870 "/home/rushlync/prg/LaTeX/Gluhlampchen/bericht.tex" "/home/rushlync/prg/LaTeX/Gluhlampchen/bericht.pdf" "bericht" 1649077871
+["pdflatex"] 1649238839 "/home/rushlync/prg/LaTeX/Gluhlampchen/bericht.tex" "/home/rushlync/prg/LaTeX/Gluhlampchen/bericht.pdf" "bericht" 1649238840
   "/etc/texmf/web2c/texmf.cnf" 1647275239 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/rushlync/prg/LaTeX/Gluhlampchen/bericht.aux" 1649077871 1326 a4c791b9c33c3b01b0bd2199b37bc501 ""
-  "/home/rushlync/prg/LaTeX/Gluhlampchen/bericht.tex" 1649077869 9169 6f1ad74c2b549f87c4419a23676a4c2e ""
+  "/home/rushlync/prg/LaTeX/Gluhlampchen/bericht.aux" 1649238840 1030 e24eb74d9e7553a26fca84af42df7a8c ""
+  "/home/rushlync/prg/LaTeX/Gluhlampchen/bericht.tex" 1649238837 9036 29cc1820f1b4b88412e42081a05191d9 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1136768653 1524 4414a8315f39513458b80dfc63bff03a ""
@@ -172,12 +172,12 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1647275425 4770781 1ed1abab22da9c3e2cc82e4db562318b ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1647275489 8255915 b7b824faaeca7c2c55702c03f79e38cc ""
   "aufgabenstellung.pdf" 1648706118 155684 d0ebf1f11e3cf0b3d44b93d9f0eb64d2 ""
-  "bericht.aux" 1649077871 1326 a4c791b9c33c3b01b0bd2199b37bc501 "pdflatex"
-  "bericht.tex" 1649077869 9169 6f1ad74c2b549f87c4419a23676a4c2e ""
+  "bericht.aux" 1649238840 1030 e24eb74d9e7553a26fca84af42df7a8c "pdflatex"
+  "bericht.tex" 1649238837 9036 29cc1820f1b4b88412e42081a05191d9 ""
   "title.tex" 1649074730 399 73870b8c2cf2b2e399152060e52302d8 ""
   (generated)
   "/home/rushlync/prg/LaTeX/Gluhlampchen/bericht.log"
-  "bericht.pdf"
   "bericht.log"
-  "bericht.aux"
+  "bericht.pdf"
   "/home/rushlync/prg/LaTeX/Gluhlampchen/bericht.pdf"
+  "bericht.aux"

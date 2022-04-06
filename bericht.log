@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.3.14)  4 APR 2022 15:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.3.14)  6 APR 2022 11:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -659,41 +659,41 @@ Make it at least 14.49998pt.
 We now make it that large for the rest of the document.
 This may cause the page layout to be inconsistent, however.
 
-[3] [4] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 39--41
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 35--37
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 39--41
+Underfull \hbox (badness 10000) in paragraph at lines 35--37
 
  []
 
 \realshift=\dimen323
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <20.74> on input line 44.
+(Font)              <20.74> on input line 40.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 44.
+(Font)              <14.4> on input line 40.
 \realshift=\dimen324
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--52
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
 
  []
 
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 71--72
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 67--68
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--90
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
 
  []
 
 \realshift=\dimen325
 \realshift=\dimen326
 \realshift=\dimen327
-[7]
+[5]
 \realshift=\dimen328
 \realshift=\dimen329
 \realshift=\dimen330
@@ -701,7 +701,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 89--90
 \realshift=\dimen332
 \realshift=\dimen333
 \realshift=\dimen334
- [8]
+ [6]
 \realshift=\dimen335
 \realshift=\dimen336
 \realshift=\dimen337
@@ -714,20 +714,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 89--90
 \realshift=\dimen344
 \realshift=\dimen345
 \realshift=\dimen346
- [9] [10] [11] [12] (/home/rushlync/prg/LaTeX/Gluhlampchen/bericht.aux) ) 
+ [7] [8] [9] (/home/rushlync/prg/LaTeX/Gluhlampchen/bericht.aux) ) 
 Here is how much of TeX's memory you used:
  30526 strings out of 481239
  747039 string characters out of 5920377
- 1112038 words of memory out of 5000000
+ 1111038 words of memory out of 5000000
  45399 multiletter control sequences out of 15000+600000
  541437 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  52i,18n,71p,464b,949s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on /home/rushlync/prg/LaTeX/Gluhlampchen/bericht.pdf (12 pages, 234455 bytes).
+Output written on /home/rushlync/prg/LaTeX/Gluhlampchen/bericht.pdf (9 pages, 233306 bytes).
 PDF statistics:
- 106 PDF objects out of 1000 (max. 8388607)
- 68 compressed objects within 1 object stream
+ 97 PDF objects out of 1000 (max. 8388607)
+ 62 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  33 words of extra memory for PDF output out of 10000 (max. 10000000)
 
