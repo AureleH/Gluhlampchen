@@ -11,6 +11,7 @@
 \usepackage[siunitx]{circuitikz}
 \usepackage{adjustbox}
 \usepackage{pgfplots}
+\usepackage{cancel}
 
 \pgfplotsset{width=10cm, compat=1.9}
 
@@ -19,7 +20,7 @@
 
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{Stromkreise \& Glühlampchen}
+\lhead{Stromkreise \& Glühlämpchen}
 \rhead{Physik Kurzbericht}
 \begin{document}
     \pgfmathwidth{"\\\\ J. Dubois \& A. Huillet\\ MNG Rämibühl\\"}
@@ -32,9 +33,21 @@
     \newpage
     \includepdf[pages=-]{aufgabenstellung.pdf}
     \section{Experiment}
+    Am 24. März beschäftigten wir uns im Rahmen des Physikpraktikums mit Stromkreisen und Glühlämpchen.
+    Ziel des Experiments war es, die Spannungen und Stromstärken der verschiedenen Lämpchen zu messen.
+    Die Spannungs- und Stromquelle war ein Netzteil. Die gewünschte Spannung konnte eingestellt werden. Ein Multimeter maß die Spannung an einem bestimmten Punkt des Stromkreises.
+    Das andere maß die Stromstärke an einem bestimmten Punkt.
+    \vspace{1cm}\\
+    \begin{figure}[h!]
+        \begin{adjustbox}{scale=0.25}
+            \includegraphics{Experiment.jpeg}
+        \end{adjustbox}
+        \caption{Einfacher Stromkreis}        
+    \end{figure}
+    
     \newpage
     \section{Fehlerrechnung}
-    Das Fehler wurde für die Stromstärke und das Widerstand berechnet. Die Differenz zwischen den grössten Wert und den kleinsten Wert ist das Fehler. Der mittlere Fehler ergibt sich durch die Summe aller Fehler geteilt durch die Anzahl von Fehler.
+    Das Fehler wurde für die Stromstärke und den Widerstand berechnet. Der Fehler ist die Differenz zwischen dem höchsten und dem niedrigsten Wert. Der durchschnittliche Fehler wurde berechnet, indem die Summe aller Fehler durch die Anzahl der Fehler dividiert wurde:
     \vspace{1cm}\\
     Fehler der Messung der Stromstärken:
     \vspace{1cm}\\
@@ -53,7 +66,7 @@
             123.9   & 122.8   & 1.1  
         \end{tabular}
         \vspace{1cm}\\
-        Das Fehler der Stromstärkemessung entspricht also:
+        Der Fehler der Stromstärkemessung entspricht also:
         \[F_I = 0.64 \hspace{4pt} mA\]
         \vspace{1cm}\\
         Fehler der Messung der Widerständen:
@@ -61,10 +74,20 @@
         \begin{tabular}{l|c|r}
             $R_{max} [\Omega]$ & $R_{min} [\Omega]$ & Fehler $[\Omega]$\\
             \hline
-            
-            
+            93.35 & 92.4 & 0.95 \\
+            105.36 & 105.8 & 0.44 \\
+            130.17 & 128.95 & 1.22 \\
+            141.47 & 140.9 & 0.57 \\
+            153 & 152.07 & 0.93 \\
+            166.38 & 166.02 & 0.36 \\
+            176.02 & 174.45 & 1.57 \\
+            184.31 & 182.95 & 1.36 \\
+            198.99 & 197.18 & 1.81 \\
+            202.36 & 200.56 & 1.8
         \end{tabular}
-
+        \vspace{1cm}\\
+        Der Fehler der Widerständemessung entspricht also:
+        \[F_R=1.101 \hspace{4pt} \Omega\]
     \newpage
     \section{Messungen}     
     \subsection{Messung A}
@@ -284,8 +307,19 @@
     \end{center}
     \newpage
     \section{Aufgaben}
+    Alle dargestellten Regressionsgeraden wurden mit Excel berechnet. Sie entsprechen:
+    \begin{enumerate}
+        \item Regressionsgerade der U-I-Kennlinie: \[f(x) = 0.2553x - 7.6082\]
+        \item Regressionsgerade der W-I-Kennlinie: \[f(x) = 1.2886x + 44.849\]
+        \item Regressionsgerade des Glühlämpchens 1: \[f(x) = 1.2991x + 43.639\]
+        \item Regressionsgerade des Glühlämpchens 2: \[f(x) = 1.2576x + 47.096\]
+        \item Regressionsgerade des Glühlämpchens 3: \[f(x) = 1.3093x + 43.797\]
+    \end{enumerate}
     \subsection{Aufgabe 1}
     Kennlinien der Glühlämpchen:
+    \vspace{1cm}\\
+    Für die Strom-Spannungs-Kennlinie wurden das Mittelwert der Spannung für jede Messung von jedem Glühlämpchen,
+    sowie das Mittelwert der Stromstärken für jede Messung von jedem Glühlämpchen berechnet.\\
     \vspace{1cm}\\
     \begin{tikzpicture}
         \begin{axis}[
@@ -298,17 +332,29 @@
             axis lines = left,
         ]
         \addplot[
-            color=green,
+            color=blue,
             mark=square*,
+            only marks,
+            style={thick}
         ]
         coordinates{
             (39.3,3.65)(48.4,5.11)(64.23,8.33)(73.4,10.37)(81.9,12.5)
             (93.53,15.54)(100.6,17.62)(107.57,19.74)(120.1,23.8)(123.23,24.85)
         };
-        \addlegendentry{$I$-$U$-Kennlinie}
+        \addlegendentry{Gemessene Werte für $\overline{I}$ \& $\overline{U}$}
+        \addplot[
+            color=red,
+            domain=0:140,
+            style={thick},
+        ]
+        {0.2553*x-7.6082};
+        \addlegendentry{Regressionsgerade für $\overline{I}$ \& $\overline{U}$}
         \end{axis}
     \end{tikzpicture}
     \vspace{2cm}\\
+    Für die Widerstands-Strom-Kennlinie wurden das Mittelwert der Stromstärken für jede Messung von jedem Glühlämpchen
+    und das Mittelwert der Widerständen für jede Messung von jedem Glühlämpchen berechnet.
+    \vspace{1cm}\\
     \begin{tikzpicture}
         \begin{axis}[
             title={\textbf{Widerstands-Strom-Kennlinie}},
@@ -322,21 +368,27 @@
         \addplot[
             color=blue,
             mark=square*,
+            only marks,
+            style={thick}
         ]
         coordinates{
             (39.3, 92.88)(48.4, 105.58)(64.233, 129.69)(73.4, 141.281)
             (81.9, 152.626)(93.533, 166.144)(100.6, 175.152)(107.5667, 183.516)
             (120.1, 198.171)(123.233, 201.653)
         };
-        \addlegendentry{$R$-$I$-Kennlinie}                 
+        
+        \addlegendentry{Gemessene Werte für $\overline{R_{tot}}$ und $\overline{I_{tot}}$}
+        \addplot[
+            color=red,
+            domain=0:140,
+            style={thick}
+        ]
+        {1.2886*x + 44.849};
+        
+        \addlegendentry{Regressionsgerade für $\overline{R_{tot}}$ \& $\overline{I_{tot}}$}
         \end{axis}
     \end{tikzpicture}
-    \vspace{1cm}\\
-    Für die Strom-Spannungs-Kennlinie wurden das Mittelwert der Spannung für jede Messung von jedem Glühlämpchen,
-    sowie das Mittelwert der Stromstärken für jede Messung von jedem Glühlämpchen berechnet.\\
-    \newline
-    Für die Widerstands-Strom-Kennlinie wurden das Mittelwert der Stromstärken für jede Messung von jedem Glühlämpchen
-    und das Mittelwert der Widerständen für jede Messung von jedem Glühlämpchen berechnet.
+    \vspace{1cm}\\    
     
     \subsection{Aufgabe 2}
     Für die Geraden der Glühlämpchen wurden die Messwerten als Koordinatenpunkte in einer Grafik eingefügt. Somit ergaben sich folgende Grafiken:
@@ -352,14 +404,25 @@
             axis lines = left,
         ]
         \addplot[
-            color=purple,
+            color=blue,
             mark=square*,
+            only marks,
             ]
             table{GL1.txt};
-        \addlegendentry{Glühlämpchen 1}    
+        \addlegendentry{Gemessene Werte Glühlämpchen 1}
+        \addplot[
+            color=red,
+            domain=0:140,
+            style={thick}
+        ]    
+        {1.2991*x+43.639};
+        \addlegendentry{Regressionsgerade Glühlämpchen 1}
         \end{axis}
     \end{tikzpicture}
     \vspace{1cm}\\
+    Der Achsenabschnitt wurde durch die lineare Regressionsfunktion berechnet. Laut den Rechnungen von Excel ist der Achsenabschnitt $a_1$:
+    \[a_1 = 43.639\]
+    \vspace{1cm}\\    
     \begin{tikzpicture}
         \begin{axis}[
             title={Gerade des \textbf{Glühlämpchens 1} im Vergleich zur \textbf{R-I-Kennlinie}},
@@ -371,14 +434,18 @@
             axis lines = left,
         ]
         \addplot[
-            color=purple,
-            mark=square*,
-            ]
-            table{GL1.txt};
-        \addlegendentry{Glühlämpchen 1}
-        \addplot[
             color=blue,
             mark=square*,
+            only marks,
+            style={thick},
+            ]
+            table {GL1.txt};
+        \addlegendentry{Gemessene Werte Glühlämpchen 1}
+        \addplot[
+            color=red,
+            mark=x,
+            only marks,
+            style={thick}
         ]
         coordinates{
             (39.3, 92.88)(48.4, 105.58)(64.233, 129.69)(73.4, 141.281)
@@ -402,15 +469,27 @@
         ]
             
             \addplot[
-                color=red,
+                color=blue,
                 mark=square*,
+                only marks,
+                style=thick
             ]
             coordinates{(39.1, 93.33)(48.4, 105.5785)(64,130.1563)(73.3, 141.4734)
             (81.8, 152.8117)(93.6, 166.0256)(101, 174.4554)(107.9, 182.9472)
             (120.7, 197.1831)(123.9, 200.565)};
-            \addlegendentry{Glühlämpchen 2}
+            \addlegendentry{Gemessene Werte Glühlämpchen 2}
+            \addplot [
+                color=red,
+                style={thick},
+                domain=0:140
+            ] 
+            {1.2476*x+47.096};
+            \addlegendentry{Regressionsgerade Glühlämpchen 2}
         \end{axis}
     \end{tikzpicture}
+    \vspace{1cm}\\
+    Der Achsenabschnitt wurde durch die lineare Regressionsfunktion berechnet. Laut den Rechnungen von Excel ist der Achsenabschnitt $a_2$:
+    \[a_2 = 47.096\]
     \vspace{1cm}\\
     \begin{tikzpicture}
         \begin{axis}[
@@ -428,21 +507,25 @@
         \addplot[
             color=blue,
             mark=square*,
+            only marks,
+            style={thick},
+            ]
+            coordinates{(39.1, 93.33)(48.4, 105.5785)(64,130.1563)(73.3, 141.4734)
+            (81.8, 152.8117)(93.6, 166.0256)(101, 174.4554)(107.9, 182.9472)
+            (120.7, 197.1831)(123.9, 200.565)};
+        \addlegendentry{Gemessene Werte Glühlämpchen 2}
+        \addplot[
+            color=red,
+            mark=x,
+            only marks,
+            style={thick}
         ]
         coordinates{
             (39.3, 92.88)(48.4, 105.58)(64.233, 129.69)(73.4, 141.281)
             (81.9, 152.626)(93.533, 166.144)(100.6, 175.152)(107.5667, 183.516)
             (120.1, 198.171)(123.233, 201.653)
         };
-        \addlegendentry{$R$-$I$-Kennlinie}      
-
-        \addplot [
-            color=red,
-            mark=square*,
-        ] coordinates{(39.1, 93.33)(48.4, 105.5785)(64,130.1563)(73.3, 141.4734)
-        (81.8, 152.8117)(93.6, 166.0256)(101, 174.4554)(107.9, 182.9472)
-        (120.7, 197.1831)(123.9, 200.565)};
-        \addlegendentry{Glühlämpchen 2}
+        \addlegendentry{$R$-$I$-Kennlinie}  
         \end{axis}        
     \end{tikzpicture}
     \vspace{1cm}\\
@@ -458,13 +541,27 @@
         ]
             
             \addplot [
-                color=magenta,
+                color=blue,
                 mark=square*,
+                only marks,
+                style={thick}
             ]
             table {GL3.txt};
-            \addlegendentry{Glühlämpchen 3}
+            
+            \addlegendentry{Gemessene Werte Glühlämpchen 3}
+
+            \addplot[
+                color=red,
+                style=thick,
+                domain=0:140
+            ]
+            {1.3093*x+43.797};
+            \addlegendentry{Regressionsgerade Glühlämpchen 3}
         \end{axis}
     \end{tikzpicture}
+    \vspace{1cm}\\
+    Der Achsenabschnitt wurde durch die lineare Regressionsfunktion berechnet. Laut den Rechnungen von Excel ist der Achsenabschnitt $a_3$:
+    \[a_3 = 43.797\]
     \vspace{1cm}\\
     \begin{tikzpicture}
         \begin{axis}[
@@ -476,23 +573,28 @@
             legend pos=outer north east,
             axis lines = left,
         ]
+        
         \addplot [
-                color=magenta,
+                color=blue,
                 mark=square*,
+                only marks,
+                style={thick},
             ]
             table {GL3.txt};
-            \addlegendentry{Glühlämpchen 3}
-            
+        \addlegendentry{Glühlämpchen 3}
         \addplot[
-            color=blue,
-            mark=square*,
-        ]
-        coordinates{
-            (39.3, 92.88)(48.4, 105.58)(64.233, 129.69)(73.4, 141.281)
-            (81.9, 152.626)(93.533, 166.144)(100.6, 175.152)(107.5667, 183.516)
-            (120.1, 198.171)(123.233, 201.653)
-        };
-        \addlegendentry{$R$-$I$-Kennlinie}
+                color=red,
+                mark=x,
+                only marks,
+                style={thick}
+            ]
+            coordinates{
+                (39.3, 92.88)(48.4, 105.58)(64.233, 129.69)(73.4, 141.281)
+                (81.9, 152.626)(93.533, 166.144)(100.6, 175.152)(107.5667, 183.516)
+                (120.1, 198.171)(123.233, 201.653)
+            };
+        \addlegendentry{$R$-$I$-Kennlinie} 
+       
         \end{axis}
     \end{tikzpicture}
     \newpage
@@ -509,4 +611,19 @@
     \begin{equation}
         P = \frac{W}{t}
     \end{equation}
+    Der Widerstand bezeichnet die Ladung geteilt durch die Stromstärke:
+    \begin{equation}
+        R = \frac{U}{I}
+    \end{equation}
+    \newline
+    In einem Stromstärke-Widerstands-Diagramm kann der Widerstand folgenderweise definiert werden:
+    \[R = k \cdot I + R_0\]
+    \vspace{0.5cm}\\
+    Ersetzt man jetzt in diesem Ausdruck $R$ mit $\frac{U}{I}$ ergibt sich:
+    \[\frac{U}{\cancel{I}} = k \cdot I^{\cancel{2}} + R_0\]
+    
+    \begin{center}
+        \large
+        \fbox{$\mathstrut$ $I = \frac{U-R_0}{k}$}        
+    \end{center}
 \end{document}
