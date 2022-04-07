@@ -1,8 +1,8 @@
 # Fdb version 3
-["pdflatex"] 1649332704 "/home/rushlync/prg/LaTeX/Gluhlampchen/bericht.tex" "/home/rushlync/prg/LaTeX/Gluhlampchen/bericht.pdf" "bericht" 1649332705
+["pdflatex"] 1649333238 "/home/rushlync/prg/LaTeX/Gluhlampchen/bericht.tex" "/home/rushlync/prg/LaTeX/Gluhlampchen/bericht.pdf" "bericht" 1649333239
   "/etc/texmf/web2c/texmf.cnf" 1647275239 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/rushlync/prg/LaTeX/Gluhlampchen/bericht.aux" 1649332705 1434 faca32919a085cf9cdaffa101edff09a ""
-  "/home/rushlync/prg/LaTeX/Gluhlampchen/bericht.tex" 1649332703 17706 7571c4fc3f85943daaf7cbaf5fcdd4e8 ""
+  "/home/rushlync/prg/LaTeX/Gluhlampchen/bericht.aux" 1649333239 1434 faca32919a085cf9cdaffa101edff09a ""
+  "/home/rushlync/prg/LaTeX/Gluhlampchen/bericht.tex" 1649333237 17799 eb76fd4e1990d0fc8b76516c87b1f4ef ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1136768653 1524 4414a8315f39513458b80dfc63bff03a ""
@@ -215,12 +215,12 @@
   "GL1.txt" 1649313672 182 99a89b823429f3ca6f184c1814f54ccf ""
   "GL3.txt" 1649313672 183 30cba2cc1f56513fc708689f8a64cbe2 ""
   "aufgabenstellung.pdf" 1648706118 155684 d0ebf1f11e3cf0b3d44b93d9f0eb64d2 ""
-  "bericht.aux" 1649332705 1434 faca32919a085cf9cdaffa101edff09a "pdflatex"
-  "bericht.tex" 1649332703 17706 7571c4fc3f85943daaf7cbaf5fcdd4e8 ""
+  "bericht.aux" 1649333239 1434 faca32919a085cf9cdaffa101edff09a "pdflatex"
+  "bericht.tex" 1649333237 17799 eb76fd4e1990d0fc8b76516c87b1f4ef ""
   "title.tex" 1649074730 399 73870b8c2cf2b2e399152060e52302d8 ""
   (generated)
-  "bericht.log"
   "bericht.pdf"
   "/home/rushlync/prg/LaTeX/Gluhlampchen/bericht.pdf"
   "/home/rushlync/prg/LaTeX/Gluhlampchen/bericht.log"
   "bericht.aux"
+  "bericht.log"
